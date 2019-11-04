@@ -1,0 +1,44 @@
+# 4 customers
+# Enter acct number
+# Enter customer type (r or b)
+# enter # of gallons
+# Store that data in water.txt
+
+
+
+db = []
+ACCT_FIELD = 0
+TYPE_FIELD = 1
+GAL_FIELD = 2
+N_USERS = 2
+
+for i in range(N_USERS):
+    user_object = [0 , '' , 0]
+    acct = int(input('Enter account number: '))
+    user_object[ACCT_FIELD] = acct
+
+    type = 'x'
+    while type not in ['R' , 'B']:
+        type = input('Enter R for residential or B for business: ')
+        type = type.upper()
+        if type not in ['R', 'B']:
+            print('Error')
+
+    user_object[TYPE_FIELD] = type
+
+    gal = int(input('Enter number of gallons used: '))
+    user_object[GAL_FIELD] = gal
+
+    db.append(user_object)
+
+for user_object in db:
+    # print(user_object[ACCT_FIELD], user_object[TYPE_FIELD], user_object[GAL_FIELD])
+    print(user_object)
+
+with f.open("water.txt", "w"):
+   f.write("Account \t Type \t Gallons")
+   for user_object in db:
+       f.append(user_object.join("\t")
+
+
+f.close()
