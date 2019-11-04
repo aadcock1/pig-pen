@@ -1,0 +1,15 @@
+# user input str
+# convert all to uppercase
+# count and display the frequency of each letter (count letters only)
+
+
+from collections import Counter
+
+mainStr = input('Enter text: ')
+mainStr = mainStr.upper()
+mainStr = mainStr.replace(" ", "")
+
+frequency = Counter(mainStr)
+
+for (key , value) in frequency.items():
+    print(key , ' ' , value)
