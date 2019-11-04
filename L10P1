@@ -1,0 +1,21 @@
+time = input("Enter time [hh:mm:ss]: ")
+time = time.strip()
+if time.count(":") != 2:
+    print("Must separate hour, minute and second with colons.")
+else:
+
+ ---
+    time_list = time.split(":")
+    --- if elses
+    else:
+        time = time.replace(":", "")
+        print("Time with colons removed:", time)
+
+
+
+#Enter time
+# Time must be in hh:mm:ss format. Error if not
+# Hour must be between 0-23 inclusive range(0,24)
+# minute must be between 0-59 inclusive  range(0,60)
+# second must be between 0-59 inclusive range(0,60)
+# If time entered is valid, remove colons and display time
